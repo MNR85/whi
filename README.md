@@ -19,7 +19,7 @@ We started with docker. For installing required packages run
 ```pip install docker```
 ### TDD
 - According to TDD principle, a test section added that required functions will be defined there.   
-- All tests are in `test` directory. There is an example of unit test for container creat/delete in `test/unit/platform`.    
+- All tests are in `test` directory. There is an example of unit test for container create/delete in `test/unit/platform`.    
 - For running tests run    
 ```python -m test.unit.platform.container -v```    
 `-m` is for declaring python modules and `-v` is for enabling verbose mode.
