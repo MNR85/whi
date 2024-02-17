@@ -14,7 +14,18 @@ You know why there is a programming technique called Dependecy Injection (DI) an
 Here is where WHI enters, WHI provide an abstract layer that hide underneath with its interface.
 
 ## Getting started
+### Managing container
+We started with docker. For installing required packages run   
+```pip install docker```
+### TDD
+- According to TDD principle, a test section added that required functions will be defined there.   
+- All tests are in `test` directory. There is an example of unit test for container creat/delete in `test/unit/platform`.    
+- For running tests run    
+```python -m test.unit.platform.container -v```    
+`-m` is for declaring python modules and `-v` is for enabling verbose mode.
+### Structure
+- In accordance with clean architecture, functions related to infrastructure will be put in `src/infrastructure`. For now docker-sdk added to this section.
+- Our main functions are in `src/core/application`. We have started our work with crudContainer.
 
-- This project is just started. We start with designing interface first, then we focus on adding different infrastructures. We will update this section ASAP.
 ## Contribution
 Any type of contribution is appreciated.
