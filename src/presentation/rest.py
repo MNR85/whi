@@ -1,3 +1,18 @@
-from src.core.usecase.crudContainer import create
+import random
+import string
 
-create(image="debian", command="echo test")
+import cherrypy
+
+
+class Server(object):
+    @cherrypy.expose
+    def index(self):
+        return "Hello world!"
+
+    @cherrypy.expose
+    def generate(self):
+        return ''.join(random.sample(string.hexdigits, 8))
+
+
+if __name__ == '__main__':
+    cherrypy.quickstart(Server())
